@@ -3,8 +3,6 @@ const taskList = document.getElementById('task-list');
 const taskBtn = document.getElementById('btn_add');
 const clearStorage = document.getElementById('clearStorage');
 const getCached = document.getElementById('getCached');
-// const btnComp = document.getElementById('btn-comp');
-// const btnUnComp = document.getElementById('btn-unComp');
 
 // 3 Buttons for edit, delete, and check/mark
 const delBtn = '<i class="fas fa-minus-square" style="float:right" id="btn_del" onclick="deleteTask(this)"></i>';
