@@ -1,5 +1,6 @@
 // getting all required elements
 const inputBox = document.querySelector("#inputBox");
+const searchBox = document.querySelector("#searchBox");
 const addBtn = document.querySelector("#btn_add");
 const todoList = document.querySelector(".todoList");
 const deleteAllBtn = document.querySelector(".clearAll");
@@ -34,16 +35,22 @@ const deleteTask = (e) => {
 };
 // ------------------------edit------------------
 //edit task function
+// function editTask(e) {
+//   let p = prompt("Edit your Task.", e.parentElement.innerText);
+//   if (p != "") {
+//     let element = e.parentElement;
+//     element.innerText = p;
+//   } else if (p === "") {
+//   }
+// }
 function editTask(e) {
   let p = prompt("Edit your Task.", e.parentElement.innerText);
-  if (p != "") {
-    let element = e.parentElement;
-    element.innerText = p;
-    //document.querySelector("listElement").textContent = pp;
-    //console.log(pp);
-  } else if (p === "") {
+  if (p == "") {
+  } else {
+    e.parentElement.innerHTML = `${p}<i class="edit far fa-edit" onclick="editTask(this)"></i><span class="icon" onclick="deleteTask(this)"><i class="fas fa-trash"></i></span>`;
   }
 }
+
 // ------------------------Mark------------------
 
 function markTask() {
@@ -66,7 +73,24 @@ function clearAll() {
 }
 deleteAllBtn.addEventListener("click", clearAll);
 
-// ------------------------filterTodo------------------
+// ------------------------searchBox------------------
+searchBox.addEventListener("keyup", myFunction);
+function myFunction() {
+  let filter, li, a, i, txtValue;
+  filter = searchBox.value.toUpperCase();
+  li = todoList.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      //console.log(txtValue.toUpperCase());
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+//--------------------------------
 // function filterTodo(e) {
 //   const todos = todoList.childNodes;
 //   todos.forEach((todo) => {
@@ -91,6 +115,7 @@ deleteAllBtn.addEventListener("click", clearAll);
 //     }
 //   });
 // }
+//------------------------------------------------
 // addBtn.onclick = () => {
 //   //when user click on plus icon button
 //   let userEnteredValue = inputBox.value; //getting input field value

@@ -33,7 +33,16 @@ main {
   display: flex;
   height: 45px;
 }
-
+#searchBox {
+  width: 85%;
+  height: 100%;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+}
 #inputBox {
   width: 85%;
   height: 100%;
