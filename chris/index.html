@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>WBS-Coding-Bootcamp - ToDo List</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ToDo-List by Salah & Chris</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="todo-wrapper">
+            <div class="card" style="width: 30rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Our ToDo List</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Developed by Salah & Chris</h6>
+                    <button class="btn btn-primary my-1" id="clearStorage">Clear Storage</button>
+                    <button class="btn btn-primary my-1" id="getCached">Get cached</button>
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Input a Task" id="inputBox">
+                        <div class="input-group-append">
+                            <button class="btn btn-success" type="button" id="btn_add"><i class="fas fa-plus-square"></i></button>
+
+                        </div>
+                    </div>
+                    <div class="card-body px-0" id="task-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+</body>
+
+</html>
+<!-- 
+<main>
+    <article class="todoContainer"> <label for="inputBox">TODO App</label>
+        <div class="inputField"> <input id="inputBox" type="text" placeholder="Add your new todo"> <button id="btn_add"><i class="fas fa-plus"></i></button> </div>
+        <ul class="todoList">
+            data are comes from local storage
+        </ul>
+        <div class="div_footer"> <span>You have <span class="pendingTasks"></span> pending tasks</span> <button class="clearAll">Clear All</button> </div>
+    </article>
+</main> -->

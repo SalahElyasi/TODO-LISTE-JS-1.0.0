@@ -1,0 +1,60 @@
+.todo-wrapper {
+    margin-top: 5rem;
+}
+
+.fa-plus-square {
+    font-size: 30px !important;
+    margin-top: 2px;
+}
+
+.fa-minus-square,
+.fa-pen-square,
+.fa-check-square {
+    font-size: 30px !important;
+    background-color: white;
+    height: 23px;
+    line-height: 25px;
+}
+
+.fa-pen-square,
+.fa-minus-square {
+    margin-left: 5px;
+}
+
+.fa-minus-square {
+    color: red;
+}
+
+.fa-pen-square {
+    color: orange;
+}
+
+.fa-check-square {
+    color: green;
+}
+
+.lineTrough {
+    text-decoration: line-through !important;
+}
+
+.completed {}
+
+#btn_edit,
+#btn_del,
+#btn_check {
+    cursor: pointer;
+}
+
+p {
+    display: inline-block;
+    margin-bottom: 0px !important;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+.alert-primary {
+    display: block;
+}
