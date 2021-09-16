@@ -11,27 +11,7 @@ const delBtn = '<i class="fas fa-minus-square" style="float:right" id="btn_del" 
 const editBtn = '<i class="fas fa-pen-square" style="float:right" id="btn_edit" onclick="editTask(this)"></i>'
 const checkBtn = '<i class="fas fa-check-square" style="float:right" id="btn_check" onclick="checkTask(this)"></i>'
 
-// const testId = document.getElementById('testId').addEventListener('click', (e) => {
-//     console.log(e);
-// })
 
-// const test2 = (e) => {
-//     console.log(e.value);
-// }
-
-// // Function to sort the listed items
-// const filterComp = () => {
-//     const tasks = taskList.childNodes;
-//     tasks.forEach((task) => {
-//         console.log(task.classList)
-//         if (task.classList) {
-//             console.log('Yo!');
-//         } else console.log('No!');
-//     })
-// }
-
-// // Eventlistener for filter button
-// btnComp.addEventListener('click', filterComp);
 
 // Function to clear the saved items in local storage
 clearStorage.addEventListener('click', () => {
